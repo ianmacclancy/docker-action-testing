@@ -1,16 +1,15 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Test python image'
+description: 'Get started with python runner'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+  myInput:
+    description: "Input to use"
+    default: "world"
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  myOutput:
+    description: "Output from the action"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.who-to-greet }}
